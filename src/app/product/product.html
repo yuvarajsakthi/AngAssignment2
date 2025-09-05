@@ -1,0 +1,56 @@
+<div class="main">
+  <div class="left">
+    <h1>Product List</h1>
+    <div class="product">
+      <div *ngFor="let product of products">
+        <h2>{{ product.productName }}</h2>
+        <p>Price: &dollar;{{ product.productPrice }}</p>
+        <p>{{ product.productDescription }}</p>
+        <p>
+          Rating:
+          <span [style.color]="product.productRating ? 'green' : 'red'">
+            &starf; {{ product.productRating }}
+          </span>
+        </p>
+        <div class="product-card" [class.on-sale]="product.productOnSale">
+          {{ product.productName }} - ₹{{ product.productPrice }}
+        </div>
+        <button [disabled]="product.productStock <= 0">Buy Now</button>
+        <button (click)="addToCart(product)">Add to Cart</button>
+
+        <h4>Customer Reviews:</h4>
+        <ul>
+          <li *ngFor="let review of product.productReviews">
+            <strong>{{ review.reviewerName }}</strong
+            >: {{ review.reviewerComment }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <h2>Shopping Cart</h2>
+    <div *ngIf="cart.length === 0">Your cart is empty.</div>
+    <ul>
+      <li *ngFor="let item of cart">
+        {{ item.productName }} - ₹{{ item.productPrice }}
+        <button (click)="removeFromCart(item)">Remove</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="user-profile">
+  <h3>Edit Profile</h3>
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="user.name" />
+  </label>
+  <br>
+  <label>
+    Email:
+    <input type="email" [(ngModel)]="user.email" />
+  </label>
+  <p>Preview: {{ user.name }} ({{ user.email }})</p>
+</div>
