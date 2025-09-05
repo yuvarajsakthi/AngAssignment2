@@ -47,14 +47,12 @@ export class Product {
 
   addToCart(item: Products) {
     this.cart.push(item);
-    console.log('Cart now:', this.cart);
   }
 
   removeFromCart(item: Products) {
     const index = this.cart.indexOf(item);
     if (index !== -1) {
       this.cart.splice(index, 1);
-      console.log('Cart now:', this.cart);
     }
   }
 }
