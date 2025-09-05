@@ -13,7 +13,7 @@
           </span>
         </p>
         <div class="product-card" [class.on-sale]="product.productOnSale">
-          {{ product.productName }} - ₹{{ product.productPrice }}
+          {{ product.productName }} - &dollar;{{ product.productPrice }}
         </div>
         <button [disabled]="product.productStock <= 0">Buy Now</button>
         <button (click)="addToCart(product)">Add to Cart</button>
@@ -34,7 +34,7 @@
     <div *ngIf="cart.length === 0">Your cart is empty.</div>
     <ul>
       <li *ngFor="let item of cart">
-        {{ item.productName }} - ₹{{ item.productPrice }}
+        {{ item.productName }} - &dollar;{{ item.productPrice }}
         <button (click)="removeFromCart(item)">Remove</button>
       </li>
     </ul>

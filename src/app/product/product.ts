@@ -18,9 +18,9 @@ export class Product {
       productOnSale: true,
       productRating: 4.5,
       productReviews: [
-        { reviewerName: 'Alice', reviewerComment: 'Great product!' },
-        { reviewerName: 'Bob', reviewerComment: 'Works smoothly.' },
-        { reviewerName: 'Charlie', reviewerComment: 'Good value for money.' },
+        { reviewerName: 'User1', reviewerComment: 'Great product!' },
+        { reviewerName: 'User2', reviewerComment: 'Works smoothly.' },
+        { reviewerName: 'User3', reviewerComment: 'Good value for money.' },
       ],
     },
     {
@@ -31,9 +31,9 @@ export class Product {
       productOnSale: true,
       productRating: 4.5,
       productReviews: [
-        { reviewerName: 'Alice', reviewerComment: 'Great product!' },
-        { reviewerName: 'Bob', reviewerComment: 'Works smoothly.' },
-        { reviewerName: 'Charlie', reviewerComment: 'Good value for money.' },
+        { reviewerName: 'User1', reviewerComment: 'Great product!' },
+        { reviewerName: 'User2', reviewerComment: 'Works smoothly.' },
+        { reviewerName: 'User3', reviewerComment: 'Good value for money.' },
       ],
     },
   ];
